@@ -1,12 +1,13 @@
-﻿int Max(int arg1, int arg2, int arg3)
+﻿int[] array = {1,32,23,44,53,6,79,88,9};
+int n = array.Length;
+int find = 44;
+int index = 0;
+while (index < n)
 {
-    int result = arg1;
-    if (arg2 > result) result = arg2;
-    if (arg3 > result) result = arg3;
-    return result;
+    if (array[index] == find)
+    {
+        Console.WriteLine(index);
+        break;
+    }
+    index++;
 }
-
-int [] array = {12,23,33,4,55,6,47,8, 99};
-
-int max = Max(Max(array[0], array[1], array[2]), Max(array[3], array[4], array[5]), Max(array[6], array[7], array[8]));
-Console.WriteLine("max = " + max);
